@@ -6,8 +6,11 @@
         <meta charset="UTF-8" />
         <!-- Adding on the defer attribute to the script tag will ensure that the script is loaded after
          the page has finished parsing. This is useful for loading scripts that may interact with the DOM,
-          such as Google Analytics.        -->
-        <script src="assets/scripts/app.js" defer></script>
+          such as Google Analytics.
+             Adding on the type="module" attribute to the script tag will ensure that the script is treated as a module.
+                  Which means that it can use import and export statements. In the script files themselves, you can use
+                   the keyword "export" to make variables and functions available to other scripts.-->
+        <script src="assets/scripts/app.js" defer type="module"></script>
     </head>
 
     <body>
