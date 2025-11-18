@@ -17,3 +17,17 @@ console.log(user);
 // Use dot notation to access object properties
 console.log(user.name);
 console.log(user.greet("Steve"));
+
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greeting(){
+        console.log(`Hello ${this.name}`);
+    }
+}
+
+let user1 = new User('Jimmy', 32);
+user1.greeting();
