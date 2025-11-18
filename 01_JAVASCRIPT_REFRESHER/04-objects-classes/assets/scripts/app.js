@@ -7,6 +7,13 @@ const pet ='Zozo';
 const user = {
     name: 'John',
     age: 28,
-    pet: pet
+    pet: pet,
+    greet (oName){
+        console.log(`Hello ${oName}`);
+        return `Hello ${this.name}`;
+    }
 };
 console.log(user);
+// Use dot notation to access object properties
+console.log(user.name);
+console.log(user.greet("Steve"));
