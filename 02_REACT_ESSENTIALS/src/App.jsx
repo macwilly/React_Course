@@ -2,7 +2,9 @@ import componentsImg from './assets/components.png';
 import Header from './components/Header.jsx';
 import CoreConcept from './components/CoreConcept';
 import MainGoal from './components/MainGoal.jsx';
+import Tabs from './components/TabButton.jsx';
 import { CORE_CONCEPTS } from './data.js';
+import TabButton from "./components/TabButton.jsx";
 
 function App() {
     return (
@@ -22,6 +24,18 @@ function App() {
                         <CoreConcept {...CORE_CONCEPTS[2]} />
                         <CoreConcept {...CORE_CONCEPTS[3]} />
                     </ul>
+                </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <menu>
+                        {/*This is an example of Component Composition Should be noted that this can take props and composition
+                           the composition can be HTML as well.
+                        */}
+                        <TabButton>Components</TabButton>
+                        <TabButton>JSX</TabButton>
+                        <TabButton>Props</TabButton>
+                        <TabButton>State</TabButton>
+                    </menu>
                 </section>
             </main>
             <MainGoal></MainGoal>
