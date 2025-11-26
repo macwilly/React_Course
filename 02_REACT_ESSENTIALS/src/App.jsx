@@ -1,46 +1,8 @@
-import reactImage from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
+import Header from './components/Header.jsx';
+import CoreConcept from './components/CoreConcept';
+import MainGoal from './components/MainGoal.jsx';
 import { CORE_CONCEPTS } from './data.js';
-
-
-const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
-
-function genRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max +1));
-}
-
-function Header() {
-    const description = reactDescriptions[genRandomInt(reactDescriptions.length -1)];
-    return (
-        <header>
-            <img src={reactImage} alt="Stylized atom"/>
-            <h1>React Essentials</h1>
-            <p>
-                {description} React concepts you will need for almost any app you are
-                going to build!
-            </p>
-        </header>
-    );
-}
-// You need to ensure that the return data is in an enclosing tag like a div
-export function MainGoal() {
-    return (
-        <div>
-            <h1>Main Goal</h1>
-            <p>My Main Goal: is to lear React so that I may apply to jobs that require it!</p>
-        </div>
-    );
-}
-// Using Javascript destructing to get the values our of the props object. This allows for shorter code as well.
-function CoreConcept({image, title, description}) {
-    return (
-        <li>
-            <img src={image} alt="" />
-            <h3>{title}</h3>
-            <p>{description}</p>
-        </li>
-    );
-}
 
 function App() {
     return (
