@@ -39,9 +39,9 @@ function App() {
                            the composition can be HTML as well.
                         */}
                         <TabButton onSelect={handleClick}>Components</TabButton>
-                        <TabButton>JSX</TabButton>
-                        <TabButton>Props</TabButton>
-                        <TabButton>State</TabButton>
+                        <TabButton onSelect={handleClick}>JSX</TabButton>
+                        <TabButton onSelect={handleClick}>Props</TabButton>
+                        <TabButton onSelect={handleClick}>State</TabButton>
                     </menu>
                 </section>
             </main>
