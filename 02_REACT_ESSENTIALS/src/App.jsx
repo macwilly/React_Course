@@ -9,8 +9,9 @@ import TabButton from "./components/TabButton.jsx";
 
 // When you define the function for onClick or other on* inside of Component function it
 // will have access to the props and state
-function handleClick() {
-    console.log("Hello World!");
+function handleClick(selectedButton) {
+    // selectedButton => 'components', 'jsx', 'props', 'state'
+    console.log("Hello World!" + selectedButton);
 }
 
 function App() {
@@ -38,10 +39,10 @@ function App() {
                         {/*This is an example of Component Composition Should be noted that this can take props and composition
                            the composition can be HTML as well.
                         */}
-                        <TabButton onSelect={handleClick}>Components</TabButton>
-                        <TabButton onSelect={handleClick}>JSX</TabButton>
-                        <TabButton onSelect={handleClick}>Props</TabButton>
-                        <TabButton onSelect={handleClick}>State</TabButton>
+                        <TabButton onSelect={() => handleClick('components')}>Components</TabButton>
+                        <TabButton onSelect={() => handleClick('jSX')}>JSX</TabButton>
+                        <TabButton onSelect={() => handleClick('props')}>Props</TabButton>
+                        <TabButton onSelect={() => handleClick('state')}>State</TabButton>
                     </menu>
                 </section>
             </main>
