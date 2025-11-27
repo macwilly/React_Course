@@ -1,18 +1,13 @@
-import componentsImg from './assets/components.png';
 import Header from './components/Header.jsx';
 import CoreConcept from './components/CoreConcept';
 import MainGoal from './components/MainGoal.jsx';
-import Tabs from './components/TabButton.jsx';
 import { CORE_CONCEPTS } from './data.js';
 import TabButton from "./components/TabButton.jsx";
 
 
 // When you define the function for onClick or other on* inside of Component function it
 // will have access to the props and state
-function handleClick(selectedButton) {
-    // selectedButton => 'components', 'jsx', 'props', 'state'
-    console.log("Hello World!" + selectedButton);
-}
+
 
 function App() {
     return (
@@ -44,6 +39,7 @@ function App() {
                         <TabButton onSelect={() => handleClick('props')}>Props</TabButton>
                         <TabButton onSelect={() => handleClick('state')}>State</TabButton>
                     </menu>
+
                 </section>
             </main>
             <MainGoal></MainGoal>
