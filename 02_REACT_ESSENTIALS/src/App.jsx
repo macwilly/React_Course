@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Header from './components/Header.jsx';
 import CoreConcept from './components/CoreConcept';
 import MainGoal from './components/MainGoal.jsx';
@@ -10,6 +11,15 @@ import TabButton from "./components/TabButton.jsx";
 
 
 function App() {
+    // first element is the data that we are managing
+    // second element is a function provided by react that and be used to update the first. Also running the
+    //    second element function tells the component to rerun
+    const [selectedTopic, setSelectedTopic] = useState('Please click a button');
+
+    function handleClick(selectedButton){
+        setSelectedTopic(selectedButton);
+        console.log(selectedTopic);
+    }
     return (
         <div>
             {/*to use the function above it can be called in two ways  <Header />  or <Header></Header> */}
@@ -39,7 +49,7 @@ function App() {
                         <TabButton onSelect={() => handleClick('props')}>Props</TabButton>
                         <TabButton onSelect={() => handleClick('state')}>State</TabButton>
                     </menu>
-
+                    {selectedTopic}
                 </section>
             </main>
             <MainGoal></MainGoal>
